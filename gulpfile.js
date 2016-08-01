@@ -4,7 +4,7 @@ var sequence = require('run-sequence');
 var tasks = requireDir('./gulp');
 
 gulp.task('build', function() {
-  sequence(['sass']);
+  sequence('clean', 'sass');
 });
 
 gulp.task('default', ['build'], function() {
